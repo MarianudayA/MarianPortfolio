@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DeParty Guru Case Study | Marian Uday</title>
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #0d0d0d;
+      color: #f5f5f5;
+      margin: 0;
+      padding: 2rem;
+    }
+    .case-study {
+      max-width: 900px;
+      margin: auto;
+    }
+    .case-study h1 {
+      font-family: 'Anton', sans-serif;
+      font-size: 3rem;
+      color: #ff0055;
+    }
+    .case-study .subtitle {
+      font-size: 1.25rem;
+      color: #ccc;
+      margin-bottom: 2rem;
+    }
+    .cs-section {
+      margin-bottom: 2.5rem;
+    }
+    .cs-section h2 {
+      color: #ff2a2a;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .cs-section ul {
+      padding-left: 1.5rem;
+    }
+    .cs-section li {
+      margin-bottom: 0.5rem;
+    }
+    .stats {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .stat-box {
+      flex: 1;
+      padding: 1rem;
+      background: #1a1a1a;
+      border-radius: 10px;
+      text-align: center;
+      border: 1px solid #333;
+    }
+    .stat-box h3 {
+      font-size: 2rem;
+      color: #ff0055;
+      margin: 0.5rem 0;
+    }
+    .stat-box p {
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+    .cta-back, .cta-download {
+      display: inline-block;
+      margin-top: 2rem;
+      margin-right: 1rem;
+      padding: 0.75rem 1.5rem;
+      background: #ff0055;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 30px;
+      transition: background 0.3s ease;
+    }
+    .cta-back:hover, .cta-download:hover {
+      background: #ff3366;
+    }
+    footer {
+      margin-top: 4rem;
+      text-align: center;
+      color: #777;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="case-study">
+    <h1>DeParty Guru — From Views to Revenue</h1>
+    <p class="subtitle">Driving awareness, leads, and conversions through strategic digital marketing.</p>
+
+    <div class="cs-section">
+      <h2>🧩 The Problem</h2>
+      <p>DeParty Guru had a vibrant brand concept but lacked online traction. Their social presence was under-leveraged, and previous ad attempts didn’t convert effectively. The client needed a robust digital strategy to boost event visibility and drive meaningful engagement.</p>
+    </div>
+
+    <div class="cs-section">
+      <h2>💡 The Solution</h2>
+      <p>I crafted and executed a dual-channel digital strategy combining high-impact content and precision-targeted ads. On Instagram, I utilized Reels and content strategy to rapidly boost discoverability. Simultaneously, I managed Facebook ads optimized for reach, engagement, and direct messaging — transforming interactions into leads.</p>
+    </div>
+
+    <div class="cs-section">
+      <h2>🎯 My Contribution</h2>
+      <ul>
+        <li><strong>Instagram Strategy:</strong> Reels achieved 29.6K views, top-performing posts reached up to 12.9K organically</li>
+        <li><strong>Facebook Ad Management:</strong> Oversaw 6 ads with a ₹4K budget, optimized for reach, views, and message leads</li>
+        <li><strong>Content Calendar:</strong> Created weekly content buckets aligned with event highlights and user interest trends</li>
+        <li><strong>Engagement Optimization:</strong> Strategically boosted high-performing Instagram media for compounding reach</li>
+        <li><strong>Message Campaigns:</strong> Drove direct inquiries through “Messages” objective ads</li>
+        <li><strong>Audience Building:</strong> Grew non-follower reach to 65,464 within 60 days</li>
+      </ul>
+    </div>
+
+    <div class="cs-section">
+      <h2>📈 Results</h2>
+      <ul>
+        <li>66,353 total reach on Instagram (65,464 from non-followers)</li>
+        <li>62,143 total ad views on Facebook</li>
+        <li>14,509 post engagements</li>
+        <li>70% revenue growth in 60 days</li>
+      </ul>
+      <div class="stats">
+        <div class="stat-box">
+          <h3>+66K</h3>
+          <p>Instagram Reach</p>
+        </div>
+        <div class="stat-box">
+          <h3>62K</h3>
+          <p>Ad Views</p>
+        </div>
+        <div class="stat-box">
+          <h3>+70%</h3>
+          <p>Revenue Growth</p>
+        </div>
+      </div>
+    </div>
+
+    <a href="../index.html#slider" class="cta-back">← Back to Projects</a>
+    <a href="https://instagram.com/departyguru" target="_blank" class="cta-download">📎 View on Instagram</a>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Marian Uday — Built with clarity, chaos & coffee.</p>
+  </footer>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const counters = document.querySelectorAll('.stat-box h3');
+      counters.forEach(counter => {
+        const raw = counter.innerText;
+        const target = parseFloat(raw.replace(/[^\d.]/g, ''));
+        let prefix = raw.includes('+') ? '+' : '';
+        let suffix = raw.includes('%') ? '%' : (raw.includes('K') ? 'K' : '');
+        let count = 0;
+        const speed = target > 100 ? 20 : 50;
+
+        const updateCount = () => {
+          count += target / speed;
+          if (count < target) {
+            counter.innerText = prefix + Math.floor(count) + suffix;
+            requestAnimationFrame(updateCount);
+          } else {
+            counter.innerText = prefix + target + suffix;
+          }
+        };
+        updateCount();
+      });
+    });
+  </script>
+</body>
+</html>

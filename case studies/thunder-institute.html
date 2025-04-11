@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thunder Institute of Music | Case Study</title>
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #0d0d0d;
+      color: #f5f5f5;
+      margin: 0;
+      padding: 2rem;
+    }
+    .case-study {
+      max-width: 900px;
+      margin: auto;
+    }
+    .case-study h1 {
+      font-family: 'Anton', sans-serif;
+      font-size: 3rem;
+      color: #ff0055;
+    }
+    .subtitle {
+      font-size: 1.25rem;
+      color: #ccc;
+      margin-bottom: 2rem;
+    }
+    .cs-section {
+      margin-bottom: 2.5rem;
+    }
+    .cs-section h2 {
+      color: #ff2a2a;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .cs-section ul {
+      padding-left: 1.5rem;
+    }
+    .cs-section li {
+      margin-bottom: 0.5rem;
+    }
+    .stats {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .stat-box {
+      flex: 1;
+      padding: 1rem;
+      background: #1a1a1a;
+      border-radius: 10px;
+      text-align: center;
+      border: 1px solid #333;
+    }
+    .stat-box h3 {
+      font-size: 2rem;
+      color: #ff0055;
+      margin: 0.5rem 0;
+    }
+    .stat-box p {
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+    .cta-back {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      background: #ff0055;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 30px;
+      transition: background 0.3s ease;
+    }
+    .cta-back:hover {
+      background: #ff3366;
+    }
+    footer {
+      margin-top: 4rem;
+      text-align: center;
+      color: #777;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="case-study">
+    <h1>Thunder Institute of Music — Scaling with Sound Strategy</h1>
+    <p class="subtitle">From zero to 43K+ views: how performance-focused campaigns brought digital growth to a music education brand.</p>
+
+    <div class="cs-section">
+      <h2>🧩 The Problem</h2>
+      <p>Thunder Institute of Music was struggling with digital visibility — starting with 0 website visits and no leads. Despite strong musical programs, their outreach was minimal. The goal was to drive traffic and increase inquiries for admissions through an engaging ad strategy.</p>
+    </div>
+
+    <div class="cs-section">
+      <h2>💡 The Solution</h2>
+      <p>I designed and launched 3 high-performance Facebook ad campaigns optimized for lead generation. With a tight daily budget of ₹100–₹250, the campaigns focused on driving messages and funneling traffic to the website. I helped shape the creatives, messaging, and targeting strategy to align with aspirational musicians and parents within specific localities.</p>
+      <p>We ran two themed campaigns each week — one promoting an intensive <strong>Crash Course</strong> and the other focusing on an engaging <strong>Summer Camp</strong> series. This alternating structure helped capture different audience segments with relevant offerings, ensuring broader appeal and consistent lead generation.</p>
+    </div>
+
+    <div class="cs-section">
+      <h2>🎯 My Contribution</h2>
+      <ul>
+        <li><strong>Campaign Architecture:</strong> Planned and executed 3 Facebook ad sets focused on conversions and reach</li>
+        <li><strong>Audience Targeting:</strong> Geo-targeted local musicians, parents of children 6–18, and hobbyist learners</li>
+        <li><strong>Creative Direction:</strong> Collaborated on copy and visuals to highlight course offerings and instructor profiles</li>
+        <li><strong>Budget Management:</strong> Managed ₹13.06K across 40 days to maintain consistency and CPL performance</li>
+        <li><strong>Lead Generation:</strong> Messages-based ads drove real-time lead queries through Messenger</li>
+      </ul>
+    </div>
+
+    <div class="cs-section">
+      <h2>📈 Results</h2>
+      <ul>
+        <li>43,198 website views in just 10 days from a 0 baseline</li>
+        <li>28,997 reach and 14,509 post engagements</li>
+        <li>Generated 91 leads via messaging: 6, 17, and 68 per campaign</li>
+      </ul>
+      <div class="stats">
+        <div class="stat-box">
+          <h3>43K+</h3>
+          <p>Website Views</p>
+        </div>
+        <div class="stat-box">
+          <h3>29K+</h3>
+          <p>Reach</p>
+        </div>
+        <div class="stat-box">
+          <h3>91</h3>
+          <p>Leads in 40 Days</p>
+        </div>
+      </div>
+    </div>
+
+    <a href="../index.html#slider" class="cta-back">← Back to Projects</a>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Marian Uday — Built with clarity, chaos & coffee.</p>
+  </footer>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const counters = document.querySelectorAll('.stat-box h3');
+      counters.forEach(counter => {
+        const raw = counter.innerText;
+        const target = parseFloat(raw.replace(/[^\d.]/g, ''));
+        let prefix = raw.includes('+') ? '+' : '';
+        let suffix = raw.includes('%') ? '%' : (raw.includes('K') ? 'K+' : '');
+        let count = 0;
+        const speed = target > 100 ? 20 : 50;
+
+        const updateCount = () => {
+          count += target / speed;
+          if (count < target) {
+            counter.innerText = prefix + Math.floor(count) + suffix;
+            requestAnimationFrame(updateCount);
+          } else {
+            counter.innerText = prefix + target + suffix;
+          }
+        };
+        updateCount();
+      });
+    });
+  </script>
+</body>
+</html>

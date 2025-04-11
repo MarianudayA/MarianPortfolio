@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NT Production | Case Study</title>
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #0d0d0d;
+      color: #f5f5f5;
+      margin: 0;
+      padding: 2rem;
+    }
+    .case-study {
+      max-width: 900px;
+      margin: auto;
+    }
+    .case-study h1 {
+      font-family: 'Anton', sans-serif;
+      font-size: 3rem;
+      color: #ff0055;
+    }
+    .subtitle {
+      font-size: 1.25rem;
+      color: #ccc;
+      margin-bottom: 2rem;
+    }
+    .cs-section {
+      margin-bottom: 2.5rem;
+    }
+    .cs-section h2 {
+      color: #ff2a2a;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .cs-section ul {
+      padding-left: 1.5rem;
+    }
+    .cs-section li {
+      margin-bottom: 0.5rem;
+    }
+    .stats {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .stat-box {
+      flex: 1;
+      padding: 1rem;
+      background: #1a1a1a;
+      border-radius: 10px;
+      text-align: center;
+      border: 1px solid #333;
+    }
+    .stat-box h3 {
+      font-size: 2rem;
+      color: #ff0055;
+      margin: 0.5rem 0;
+    }
+    .stat-box p {
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+    .cta-back {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      background: #ff0055;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 30px;
+      transition: background 0.3s ease;
+    }
+    .cta-back:hover {
+      background: #ff3366;
+    }
+    footer {
+      margin-top: 4rem;
+      text-align: center;
+      color: #777;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="case-study">
+    <h1>NT Production — Launched to Connect</h1>
+    <p class="subtitle">How we launched and grew a new Instagram presence organically in one week.</p>
+
+    <div class="cs-section">
+      <h2>🧩 The Problem</h2>
+      <p>NT Production was starting from scratch on Instagram — no prior content, followers, or brand engagement. The challenge was to create momentum with zero ad spend and build a foundation for ongoing community engagement.</p>
+    </div>
+
+    <div class="cs-section">
+      <h2>💡 The Solution</h2>
+      <p>I crafted a Reels-first content strategy designed to grab attention fast and encourage interactions. I focused on behind-the-scenes footage, micro-edits, and community-driven formats to create high engagement with minimal friction.</p>
+    </div>
+
+    <div class="cs-section">
+      <h2>🎯 My Contribution</h2>
+      <ul>
+        <li><strong>Account Launch:</strong> Strategically set up the Instagram account with optimized bio, highlights, and handles</li>
+        <li><strong>Content Plan:</strong> Created and scheduled daily Reels with trending audio and niche storytelling</li>
+        <li><strong>Growth Strategy:</strong> Focused on organic distribution to reach new audiences via Reels</li>
+        <li><strong>Content Execution:</strong> Produced and edited all visuals in alignment with the NT Production brand</li>
+        <li><strong>Analytics & Optimization:</strong> Monitored early content to adjust timing, format, and hashtags</li>
+      </ul>
+    </div>
+
+    <div class="cs-section">
+      <h2>📈 Results (First Week)</h2>
+      <ul>
+        <li>1,222 organic Reels views</li>
+        <li>119 accounts reached</li>
+        <li>102 interactions (likes, shares, replies)</li>
+        <li>10 new followers</li>
+        <li>Reels accounted for 97% of reach and 100% of interactions</li>
+      </ul>
+      <div class="stats">
+        <div class="stat-box">
+          <h3>1,222</h3>
+          <p>Views (Reels)</p>
+        </div>
+        <div class="stat-box">
+          <h3>119</h3>
+          <p>Accounts Reached</p>
+        </div>
+        <div class="stat-box">
+          <h3>102</h3>
+          <p>Engagements</p>
+        </div>
+      </div>
+    </div>
+
+    <a href="../index.html#slider" class="cta-back">← Back to Projects</a>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Marian Uday — Built with clarity, chaos & coffee.</p>
+  </footer>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const counters = document.querySelectorAll('.stat-box h3');
+      counters.forEach(counter => {
+        const raw = counter.innerText;
+        const target = parseFloat(raw.replace(/[^0-9.]/g, ''));
+        let prefix = raw.includes('+') ? '+' : '';
+        let suffix = raw.includes('%') ? '%' : '';
+        let count = 0;
+        const speed = target > 100 ? 20 : 50;
+
+        const updateCount = () => {
+          count += target / speed;
+          if (count < target) {
+            counter.innerText = prefix + Math.floor(count) + suffix;
+            requestAnimationFrame(updateCount);
+          } else {
+            counter.innerText = prefix + target + suffix;
+          }
+        };
+        updateCount();
+      });
+    });
+  </script>
+</body>
+</html>
